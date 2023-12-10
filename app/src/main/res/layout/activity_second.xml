@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Points of interest"
+        android:textSize="24sp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <!-- Chips para Hoteles, Restaurantes, Shows y Museos -->
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_hotels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotels"
+            style="@style/Widget.MaterialComponents.Chip.Choice" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurants"
+            style="@style/Widget.MaterialComponents.Chip.Choice" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_shows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shows"
+            style="@style/Widget.MaterialComponents.Chip.Choice" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_museums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Museums"
+            style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Spinner
+        android:id="@+id/spinnerExperiences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chipGroup"
+        android:layout_marginTop="106dp"
+        android:entries="@array/experience_array" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_foreground"
+            app:layout_anchor="@id/bottomAppBar" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</RelativeLayout>
